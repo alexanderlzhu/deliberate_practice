@@ -56,6 +56,14 @@ In biology, a parasite is not always a killer; it can be symbiotic or load-beari
 - **Energy over Matter:** If the "defect" provides an open file, a key square, or an initiative that the opponent cannot easily neutralize, the mechanic is deep and the rule is shallow.
 - **Systemic Goal:** What is the *metabolism* of this position? (e.g., Is it a slow grind or a high-energy race?)
 
+## Phase-Dependency (The Meta-Sin)
+A "Sin" is often just a "Virtue" applied in the wrong phase of the system.
+- **Growth Phase (Practice):** Perfectionism and Thinking are essential. You need depth and dogma to build the foundation.
+- **Performance Phase (Match):** These become Sins. You must shift to Practicality, Intuition, and Percentage Play.
+- **The Error:** Failing to pivot your "Weights" ($w_i$) when moving between these phases.
+
 ## Related Models
-- [[Thinking]] (The Sin of ignoring the system)
+- [[Thinking]]
 - [[Materialism]]
+- [[Wanting]]
+- [[MTQ_Framework]]

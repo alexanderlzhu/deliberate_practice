@@ -77,7 +77,7 @@ def link(from_type, from_name, rel_type, to_type, to_name, **props):
     """
     params = {"from_name": from_name, "to_name": to_name, **props}
     conn.execute(q, params)
-    console.print(f"[blue]Linked:[/blue] ({from_name}) -\[{rel_type}]-> ({to_name})")
+    console.print(rf"[blue]Linked:[/blue] ({from_name}) -\[{rel_type}]-> ({to_name})")
 
 def link_observation(obs_slug, rel_type, model_name, **props):
     conn = get_db()
@@ -87,7 +87,7 @@ def link_observation(obs_slug, rel_type, model_name, **props):
     """
     params = {"slug": obs_slug, "model_name": model_name}
     conn.execute(q, params)
-    console.print(f"[blue]Linked Obs:[/blue] ({obs_slug}) -\[{rel_type}]-> ({model_name})")
+    console.print(rf"[blue]Linked Obs:[/blue] ({obs_slug}) -\[{rel_type}]-> ({model_name})")
 
 def link_applies(model_name, activity_name):
     conn = get_db()
@@ -95,7 +95,7 @@ def link_applies(model_name, activity_name):
         "MATCH (m:Model {name: $mname}), (a:Activity {name: $aname}) MERGE (m)-[:APPLIES_TO]->(a)",
         {"mname": model_name, "aname": activity_name}
     )
-    console.print(f"[blue]Linked:[/blue] ({model_name}) -\[APPLIES_TO]-> ({activity_name})")
+    console.print(rf"[blue]Linked:[/blue] ({model_name}) -\[APPLIES_TO]-> ({activity_name})")
 
 def visualize(target=None):
     """Render a rich dashboard of the investigative graph."""
@@ -193,6 +193,9 @@ def list_nodes(node_type):
         table.add_column("Name", style="bold")
         table.add_column("Status")
         res = conn.execute(f"MATCH (n:{node_type}) RETURN n.name, n.status")
+    elif node_type == "Activity":
+        table.add_column("Name", style="bold")
+        res = conn.execute(f"MATCH (n:{node_type}) RETURN n.name")
     else:
         table.add_column("Name", style="bold")
         table.add_column("Description")
@@ -222,6 +225,10 @@ def main():
 
     p = subparsers.add_parser("add-activity")
     p.add_argument("name")
+
+    p = subparsers.add_parser("add-concept")
+    p.add_argument("name")
+    p.add_argument("--description", default="")
 
     p = subparsers.add_parser("add-gap")
     p.add_argument("name")
@@ -259,6 +266,8 @@ def main():
         add_observation(args.slug, args.date, args.summary, args.file)
     elif args.command == "add-activity":
         add_activity(args.name)
+    elif args.command == "add-concept":
+        add_concept(args.name, args.description)
     elif args.command == "add-gap":
         add_gap(args.name, args.status, args.file)
     elif args.command == "link":
