@@ -1,40 +1,43 @@
-# Investigative Learning Protocol
+# Investigative Learning Protocol (Dynamical Systems Edition)
 
-This document defines the generalized process for improving mental models and resolving performance gaps, adapted from the `corporate_crime_detective` and `deliberate_practice` workflows.
+This document defines the generalized process for improving mental models and resolving performance gaps, grounded in **Dynamical Systems Theory**.
 
 ## Core Philosophy
-Learning is an investigative process. We don't just "practice"; we **observe**, **hypothesize**, and **test** our mental models against reality.
+Learning is the process of moving from **Surface Perception** (dogma, rules, cheap signals) to **Systemic Perception** (mechanics, energy, costly signals). We treat every skill as a dynamical system with its own attractors, bifurcations, and metabolism.
 
 ## Operational Subroutines
 
-### Subroutine: OBSERVATION
-1. **CAPTURE:** Record the raw data point (e.g., a specific move, a feeling, a result).
-2. **CATEGORIZE:** Link the observation to an existing **Model** (e.g., "Egoism") or an **Activity** (e.g., "Chess").
-3. **ANALYZE:** Determine if the observation supports or contradicts the model.
+### Subroutine: SYSTEMIC_EVALUATION (The Fermi Method)
+When evaluating a state, do not calculate; audit the **Weights** of the system.
+1. **IDENTIFY:** List the relevant factors ($f_i$) in the current state.
+2. **WEIGHT:** Assign "Fermi Weights" ($w_i$) based on the system's phase (e.g., in a crisis, $w_{safety} \gg w_{efficiency}$).
+3. **COMPUTE:** $Eval = \sum w_i f_i$. If the result is uncertain, you are likely at a **Bifurcation Point**.
+
+### Subroutine: OPERATIONAL_AUDITS
+Use these tools to bypass "Thinking" and see the underlying reality:
+- **Mechanical Empathy:** "Talk to the pieces." Audit the functional needs of every component in the system. If they are unhappy, the system is brittle.
+- **Zahavian Signaling:** Distinguish between **Cheap Signals** (easily faked dogmas) and **Costly Signals** (handicaps that prove underlying fitness). Look for what the system *costs* to maintain its state.
+
+### Subroutine: BIFURCATION_MANAGEMENT
+Identify points where the system's fundamental nature is about to change:
+1. **DETECT:** Look for major structural shifts (trades, breaks, transitions).
+2. **RESET:** Treat the post-bifurcation state as a "Fresh Board." Let the old "story" die.
+3. **RE-WEIGHT:** Immediately re-calculate the Fermi Weights for the new phase.
 
 ### Subroutine: GAP_RESOLUTION (Scientific Method)
 When a recurring error or an unexplained phenomenon is identified, create a directory in `gaps/{gap-name}/` and execute:
+1. **1-question.md:** Define the mystery. Why do current models fail?
+2. **2-hypothesis.md:** Propose a falsifiable candidate model (look for **Structural Isomorphisms** in other domains).
+3. **3-predictions.md:** List specific, testable "If/Then" outcomes.
+4. **4-tests.md:** Execute "Chaotic Drills" or sessions to test the hypothesis.
+5. **5-conclusion.md:** Accept, Reject, or Refine the model.
 
-1. **1-question.md:** Define the specific mystery or weakness. Why do existing models fail to explain/prevent this?
-2. **2-hypothesis.md:** Propose a falsifiable candidate model or explanation.
-3. **3-predictions.md:** "If the hypothesis is true, what *else* should I see?" List testable outcomes.
-4. **4-tests.md:** Design and execute specific drills or sessions to validate/falsify predictions. Record raw results in tables.
-5. **5-conclusion.md:** 
-   - **Accept:** Update/promote the mental model.
-   - **Reject:** Document the failure and generate a new hypothesis.
-   - **Refine:** Narrow the focus and re-test.
+## Cross-Domain Isomorphism
+Always look for structural parallels. If a mechanic works in biology or corporate forensics, it likely has a mathematical analogue in chess, tennis, or coding. The logic of **Load-Bearing Systems** and **Basins of Attraction** is universal.
 
-### Subroutine: MODEL_PROMOTION
-When a hypothesis is validated across multiple observations:
-1. Update the central model file in `models/`.
-2. Add the validated causal links to the knowledge graph.
-3. Retroactively check past observations to see if the new model explains old failures.
+---
 
 ## Workflow Integration
-
-1. **Pre-Session (Orient):** Select a **Model** to test or a **Gap** to investigate.
-2. **Session (Act):** Execute the activity while monitoring for specific **Triggers**.
-3. **Post-Session (Observe/Decide):** 
-   - Record an **Observation**.
-   - Link to the graph: `link-obs <slug> SUPPORTS|CONTRADICTS <model>`.
-   - If a gap is detected, start a new `GAP_RESOLUTION` cycle.
+1. **Orient:** Select a **Model** to test or a **Gap** to investigate.
+2. **Act:** Execute while monitoring for **Bifurcation Triggers**.
+3. **Observe:** Record findings. Link to the graph: `viz` to see the dashboard.
