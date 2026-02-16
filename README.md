@@ -1,4 +1,4 @@
-# Deliberate Practice Journal (Model-Centric)
+# Strategic Mental Consilience (Model-Centric)
 
 This directory serves as an investigative deliberate practice journal. It applies the model-based discovery workflow from `corporate_crime_detective` to hobby mastery.
 
